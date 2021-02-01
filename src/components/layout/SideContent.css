@@ -1,0 +1,6 @@
+#side-content.notShow {
+  width: 0%;
+}
+#side-content.show {
+  width: 33%;
+}
