@@ -18,7 +18,7 @@ export const SideContent: React.FC = ({ children }) => {
     } else if (!show) {
       setTimeout(() => {
         setShow(true)
-      }, 10)
+      }, 500)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [shoppingList.shoppingItems])
