@@ -1,0 +1,11 @@
+.tabs {
+  height: 100%;
+}
+
+.tab-panel {
+  height: 100%;
+}
+
+.tab-panel:focus {
+  outline: none;
+}

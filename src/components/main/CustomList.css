@@ -1,0 +1,24 @@
+.custom-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0rem 0;
+  overflow: scroll;
+}
+
+.custom-list-item {
+  border-top: 1px solid gray;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  height: 150px;
+  flex-direction: row;
+}
+
+.list-item-part {
+  flex-basis: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

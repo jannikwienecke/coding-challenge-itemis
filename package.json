@@ -1,0 +1,113 @@
+{
+  "name": "coding-challenge-itemis-nr-1",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/plugin-transform-react-jsx": "^7.12.12",
+    "@babel/preset-typescript": "^7.12.7",
+    "@emotion/babel-plugin-jsx-pragmatic": "^0.1.5",
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
+    "@reach/tabs": "^0.13.0",
+    "@testing-library/cypress": "^7.0.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.2.3",
+    "@testing-library/react-hooks": "^3.4.2",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-macros": "^3.0.0",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+    "cross-env": "^7.0.2",
+    "cypress": "^5.6.0",
+    "cypress-hmr-restarter": "^1.4.1",
+    "eslint": "^7.18.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "4.3.6",
+    "lint-staged": "10.5.3",
+    "nstall": "^0.2.0",
+    "postcss": "^8.2.1",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-error-boundary": "^3.0.2",
+    "react-proptypes-generate": "^1.7.2",
+    "react-scripts": "4.0.1",
+    "react-test-renderer": "^17.0.1",
+    "serve": "^11.3.2",
+    "start-server-and-test": "^1.11.5",
+    "tailwindcss": "^2.0.2",
+    "twin.macro": "^2.1.1",
+    "typescript": "^4.0.3",
+    "web-vitals": "^0.2.4"
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "emotion"
+    }
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:cli": "cross-env BROWSER=none react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
+    "cy:install": "cypress install",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test:e2e": "start-server-and-test start:cli http://localhost:3000/list cy:open",
+    "test:e2e:run": "start-server-and-test serve http://localhost:8811/list cy:run"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 100
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && pretty-quick --staged",
+      "pre-push": "tsc && npm run lint"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-plugin-typescript-to-proptypes": "^1.4.2"
+  }
+}
